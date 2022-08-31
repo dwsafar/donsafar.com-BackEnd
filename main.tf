@@ -1,11 +1,11 @@
 #The configuration for the `remote` backend.
 terraform {
   backend "s3" {
-    # Replace this with your bucket name!
+    # Add Bucket for state storage
     bucket         = "terraform-state-donsafar.com"
     key            = "global/s3/terraform.tfstate"
     region         = "us-east-1"
-    # Replace this with your DynamoDB table name!
+    # Add DynamoDB for lock storage
     dynamodb_table = "terraform-state-donsafar.com-locks"
     encrypt        = true
   }
